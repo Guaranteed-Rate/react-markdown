@@ -75,6 +75,9 @@ function getNodeProps(node, key, opts, renderer, parent, index) {
       break
     case 'heading':
       props.level = node.depth
+      if (typeof node.data !== 'undefined' && typeof node.data.hProperties !== 'undefined') {
+        assignDefined(props, node.data.hProperties)
+      }
       break
     case 'list':
       props.start = node.start
@@ -112,6 +115,9 @@ function getNodeProps(node, key, opts, renderer, parent, index) {
           ? opts.transformLinkUri(node.url, node.children, node.title)
           : node.url
       })
+      if (typeof node.data !== 'undefined' && typeof node.data.hProperties !== 'undefined') {
+        assignDefined(props, node.data.hProperties)
+      }
       break
     case 'image':
       assignDefined(props, {

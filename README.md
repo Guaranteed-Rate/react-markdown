@@ -1,4 +1,14 @@
-# react-markdown
+# react-markdown - GR Fork
+
+To allow the addition of the [Kramdown attribute syntax], a change to the core
+[react-markdown] library that ensures the data created by the remark-attrs
+plugin gets propagated. See the [react-markdown] github for complete
+documentation (it also appears below).
+
+  [Kramdown attribute syntax]: https://kramdown.gettalong.org/syntax.html#span-ials
+  [react-markdown]: https://github.com/rexxars/react-markdown
+
+## react-markdown
 
 Renders Markdown as pure React components.
 
