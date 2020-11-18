@@ -84,6 +84,11 @@ function getNodeProps(node, key, opts, renderer, parent, index) {
       props.ordered = node.ordered
       props.tight = !node.loose
       props.depth = node.depth
+
+      if (typeof node.data !== 'undefined' && typeof node.data.hProperties !== 'undefined') {
+        assignDefined(props, node.data.hProperties);
+      }
+
       break
     case 'listItem':
       props.checked = node.checked
